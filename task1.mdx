@@ -1,0 +1,82 @@
+---
+title: Documentation Architecture Overview
+description: Explanation of the documentation navigation redesign
+---
+
+# Documentation Architecture Overview
+
+## Decision-Making Process
+
+We redesigned the documentation structure to support:
+
+1. Product versioning
+2. Multi-language support
+3. Scalable long-term growth
+4. Clear upgrade paths between versions
+
+The previous structure only supported a single version (V1) in English. As the product matures, this will become limiting for both users and maintainers.
+
+We introduced:
+
+- Semantic versioning (`1.0.0`, `2.0.0`)
+- Language segmentation (`en`, `fr`)
+- Dedicated changelog and API reference sections
+
+This approach aligns the documentation with real product lifecycle practices.
+
+---
+
+## Key User Experience Improvements
+
+### 1. Version Clarity
+Users can now:
+- Stay on a stable version
+- Upgrade intentionally
+- Reference historical documentation
+
+This reduces confusion during migrations.
+
+---
+
+### 2. Language Accessibility
+French documentation enables:
+- Broader adoption
+- Regional compliance support
+- Better onboarding for non-English users
+
+---
+
+### 3. Developer-Centric Enhancements
+- Dedicated API Reference improves integration workflows
+- Changelog page improves transparency
+- Advanced Usage section keeps core docs clean while supporting power users
+
+---
+
+### 4. Logical Content Separation
+Each version is fully self-contained.
+Users do not mix content from different releases.
+
+---
+
+## Trade-Offs Considered
+
+### Increased Structural Complexity
+The new structure is more nested and harder to maintain manually.
+However, this complexity is necessary for scalability.
+
+### Content Duplication Across Languages
+French pages currently mirror English pages.
+This requires translation maintenance overhead.
+
+---
+
+## How This Structure Scales
+
+This architecture supports:
+
+- Adding new versions (`3.0.0`, `4.0.0`)
+- Adding new languages (`es`, `de`, `pt`)
+- Adding beta or experimental channels
+- Deprecating older versions without removing them
+

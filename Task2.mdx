@@ -1,0 +1,190 @@
+---
+title: Component Strategy for v2 Documentation
+description: Rationale behind enhanced component usage in v2
+---
+
+# Component Strategy for v2 Documentation
+
+## Design Philosophy
+
+The v2 documentation shifts from static markdown to structured, interactive components to:
+
+- Make the docs easier to read without feeling overwhelming
+- Help users quickly find what they’re looking for
+- Make code examples and developer steps simple to follow
+- Clearly highlight important notes and warnings
+- Give the documentation a cleaner, more modern feel
+
+---
+
+## Why Specific Components Were Chosen
+
+### 1. `<Info>` for Contextual Framing
+
+Used at the top of the page to:
+
+- Highlight the primary value proposition
+- Provide immediate clarity about the feature
+- Visually separate summary from body content
+
+This improves first-glance comprehension.
+
+---
+
+### 2. `<AccordionGroup>` and `<Accordion>`
+
+Used for:
+
+- AI Quality Prediction
+- IoT Testing
+- Quality Standards
+- Quality Insights
+
+**Why?**
+
+These sections contain:
+- Multiple conceptual layers
+- Technical depth
+- Optional advanced knowledge
+
+Accordions allow progressive disclosure:
+- Beginner users see high-level summaries
+- Advanced users expand for technical depth
+
+This reduces scroll fatigue and improves information density management.
+
+---
+
+### 3. `<CardGroup>` for Predictive Maintenance
+
+Predictive Maintenance benefits were converted from a list to cards because:
+
+- Each item represents a standalone value proposition
+- Cards improve visual separation
+- Cards improve skimmability
+- Cards reinforce benefit-oriented messaging
+
+This makes the section feel outcome-focused rather than technical.
+
+---
+
+### 4. `<Note>` - Contextual Clarification
+
+Replaced blockquote formatting to:
+
+- Improve visual hierarchy
+- Standardize callout style
+- Emphasize version-specific upgrades
+
+This clarifies the delta between v1 and v2.
+
+---
+
+### 5. `<Warning>` - High-Priority Alerts
+
+Used for critical quality alerts because:
+
+- Safety issues require high visual priority
+- Production halts must stand out
+- It creates emotional urgency
+
+This reduces the chance of overlooking safety-critical information.
+
+---
+
+### 6. Named Code Blocks
+
+```javascript sample.js```
+
+Improves:
+
+- Developer clarity
+- Copy-paste context
+- Real-world implementation feel
+
+The `<Tabs>` component was used to organize parallel troubleshooting scenarios within the same category. It allows users to switch between closely related issues without losing context or overwhelming the page with repeated content.
+
+Tabs were intentionally used alongside `<Accordion>` components to create a clear and scalable information hierarchy.
+
+---
+
+### 7.`<Tabs>` - parallel variations within the same category.
+
+Tabs is used when:
+
+- Multiple issues belong to the same category  
+- The structure of each issue is similar  
+- Users typically need to focus on only one variation  
+- Content would otherwise feel repetitive  
+- Deep vertical nesting should be avoided  
+
+Tabs work best when the user must choose **one scenario at a time**, rather than read everything sequentially.
+
+---
+
+### 8. `<Steps>` - Sequential Troubleshooting
+
+Used for structured troubleshooting flows because:
+
+- Many issues require actions in a specific order  
+- Users need clear guidance on what to try first  
+- Skipping steps can lead to repeated errors  
+- Troubleshooting often follows a logical sequence  
+---
+
+### 9. `<Update>` - Highlighting Version Changes
+
+Used to highlight new or changed functionality in v2 because:
+
+- Users upgrading from v1 need clear visibility into what changed  
+- Version-specific improvements should stand out  
+- Important release updates should not be buried in paragraphs  
+- It reinforces transparency in versioned documentation  
+
+This helps users quickly identify new capabilities without scanning the entire page.
+
+---
+
+### 10. `<CodeGroup>` - Supporting Multiple Code Variations
+
+Used to present multiple related code examples because:
+
+- Developers may use different languages or request formats  
+- Parallel implementations should stay visually grouped  
+- Stacking multiple code blocks vertically increases scroll fatigue  
+- It keeps similar examples aligned and easy to compare  
+
+This improves developer experience by allowing users to select the code variation relevant to them while maintaining a clean and scalable layout.
+
+## How your enhancements improve the user experience
+
+### 1. Reduced Cognitive Load
+
+- Collapsible sections prevent overwhelming users.
+- Information is layered instead of dumped.
+
+### 2. Improved Readability
+
+- Cards highlight key benefits.
+- Callouts draw attention to critical points.
+- Clear separation between conceptual and technical content.
+
+### 3. Better Role-Based Consumption
+
+- The structure now supports:
+- Operators → High-level feature understanding
+- QA managers → Compliance & monitoring focus
+- Developers → API + AI implementation
+- Executives → Outcome-driven benefits
+
+### 4. Modern Documentation Feel
+
+The use of structured components aligns with:
+  - Product-led documentation
+  - SaaS UI conventions
+  - Enterprise documentation standards
+This increases perceived product maturity.
+
+## Any custom styling decisions and their rationale
+
+- No custom styling
